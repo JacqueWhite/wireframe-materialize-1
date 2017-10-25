@@ -1,0 +1,12 @@
+div {
+    display: block;
+}
+
+/*.container, .row, .col {
+	border: solid grey 1px;
+}*/
+
+img {
+	max-height: 900px;
+	width: auto;
+}
