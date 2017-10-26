@@ -15,29 +15,31 @@
 
 <body>
 
-<nav role="navigation">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="#index-banner" class="brand-logo">Title</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#section-1">section-1</a></li>
-        <li><a href="#section-2">section-2</a></li>
-        <li><a href="#section-3">section-3</a></li>
-        <li><a href="#section-4">section-4</a></li>
-        <li><a href="#section-5">section-5</a></li>
-      </ul>
-      <ul id="nav-mobile" class="side-nav">
-        <li><a href="#section-1">section-1</a></li>
-        <li><a href="#section-2">section-2</a></li>
-        <li><a href="#section-3">section-3</a></li>
-        <li><a href="#section-4">section-4</a></li>
-        <li><a href="#section-5">section-5</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-    </div>
-</nav>
+<div class="navbar-fixed">
+  <nav role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container movetext" href="#index-banner" class="brand-logo">Title</a>
+        <ul class="right hide-on-med-and-down section table-of-contents">
+          <li><a href="#section-1" class="active">section-1</a></li>
+          <li><a href="#section-2">section-2</a></li>
+          <li><a href="#section-3">section-3</a></li>
+          <li><a href="#section-4">section-4</a></li>
+          <li><a href="#section-5">section-5</a></li>
+        </ul>
+        <ul id="nav-mobile" class="side-nav">
+          <li><a href="#section-1">section-1</a></li>
+          <li><a href="#section-2">section-2</a></li>
+          <li><a href="#section-3">section-3</a></li>
+          <li><a href="#section-4">section-4</a></li>
+          <li><a href="#section-5">section-5</a></li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
+  </nav>
+</div>
   
 <div id="index-banner" class="parallax-container valign-wrapper">      
-  <div class="section no-pad-bot" id="section-1">
+  <div class="section no-pad-bot scrollspy" id="section-1">
    <div class="container"> 
     <div class="row center">
       <div class="header col s12 light"></div>
@@ -51,7 +53,7 @@
 </div>
 
 <div class="container">
-  <div class="section" id="section-2">
+  <div class="section scrollspy" id="section-2">
     <div class="row center">
       <div class="col s12 m4">
         <h4>h4</h4>
@@ -70,7 +72,7 @@
 </div>
 
 <div class="parallax-container valign-wrapper">
-  <div class="section no-pad-bot" id="section-3">
+  <div class="section no-pad-bot scrollspy" id="section-3">
     <div class="container">
       <div class="row center">
         <div class="col s12 m4"></div>
@@ -83,7 +85,7 @@
 </div>
 
 <div class="container">
-  <div class="section " id="section-4">
+  <div class="section scrollspy" id="section-4">
     <div class="row center">
       <div class="col s12 m4">
         <h4>h4</h4>
@@ -102,7 +104,7 @@
 </div>
 
 <div class="parallax-container valign-wrapper">
-  <div class="section no-pad-bot" id="section-5">
+  <div class="section no-pad-bot scrollspy" id="section-5">
     <div class="container">
       <div class="row center">
         <div class="col s12 m4"></div>
@@ -113,6 +115,10 @@
   </div>
   <div class="parallax"><img src="https://s3.us-east-2.amazonaws.com/jacqueline.white.wireframes/nathan-dumlao-290152.jpg" class="img-responsive" alt=""></div>
 </div>
+
+  <div id="go-top" class="row center">
+    <a id="to-top" class="scrollspy" title="Back to Top" href="#index-banner"><i class="material-icons" id="top-icon">keyboard_arrow_up</i></a>
+  </div>
 
 <footer class="page-footer">
   <div class="container">
@@ -141,11 +147,13 @@
       </div>
     </div>
   </div>
+
   <div class="footer-copyright">
     <div class="container">
     copyright
     </div>
   </div>
+
 </footer>
 
 </body>
@@ -156,9 +164,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
 <script type="text/javascript">
-    $(".button-collapse").sideNav();
     $(document).ready(function(){
-    $('.parallax').parallax();
+      $('.parallax').parallax();
+      $('.scrollspy').scrollSpy();
+      $(".button-collapse").sideNav();
     });
 </script>
 
